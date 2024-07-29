@@ -1,0 +1,142 @@
+
+/* Start Crew */
+
+.crew {
+    background-image: url('../images/crew/background-crew-desktop.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    padding-top: calc(8.5rem + 4.75rem);
+}
+
+.crew .container {
+    position: relative;
+}
+
+.crew .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.crew .content .role {
+    margin-top: 9.625rem;
+    font-family: var(--second-font);
+    color: #fff;
+    font-weight: normal;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 0.9375rem;
+}
+
+.crew .content .name {
+    font-family: var(--second-font);
+    color: #fff;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1.6875rem;
+}
+
+.crew .content .bio {
+    font-family: var(--main-font);
+    color: var(--second-color);
+    line-height: 1.4;
+    margin-bottom: 6.25rem;
+    width: 30.5rem;
+} 
+
+.crew .content img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.crew .dots {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.crew .dots .dot {
+    width: 0.9275rem;
+    height: 0.9275rem;
+    border-radius: 50%;
+    background-color: #36372d;
+    cursor: pointer;
+}
+
+.crew .dots .dot:hover {
+    background-color: #292c34;
+}
+
+.crew .dots .dot.active {
+    background-color: #fff;
+}
+
+@media (max-width: 68.75rem) {
+    .crew .content img {
+        position: initial;
+        margin-bottom: 2rem;
+        width: 20.4375rem;
+    }
+}
+
+@media (max-width: 48rem) {
+    .crew {
+        background-image: url('../images/crew/background-crew-tablet.jpg');
+    }
+
+    .crew .content {
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .crew .info {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .crew .dots .dot {
+        background-color: #19191a;
+    }
+}
+
+@media (max-width: 36rem) {
+    .crew {
+        background-image: url('../images/crew/background-crew-mobile.jpg');
+    }
+
+    .crew .content img {
+        margin-bottom: 2rem;
+        width: 20.4375rem;
+    }
+
+    .crew .content {
+        justify-content: center;
+    }
+
+    .crew .info {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .crew .info .name {
+        font-size: 1.5rem;
+    }
+
+    .crew .info .bio {
+        font-size: 0.9375rem;
+        width: 20.4375rem;
+    }
+
+    .crew .dots .dot {
+        background-color: #19191a;
+    }
+}
+
+
+/* End Crew */

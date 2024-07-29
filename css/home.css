@@ -1,0 +1,125 @@
+/* Start Landing*/
+
+.landing {
+     background-image: url('../images/home/background-home-desktop.jpg');
+     background-position: center;
+     background-size: cover;
+     display: flex;
+     padding-top: calc(8.5rem + 4.75rem);
+}
+
+.landing .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: var(--main-padding-bottom);
+}
+
+.landing .container .content {
+    width: 22.875rem;
+}
+
+.landing .container h1 {
+    font-size: 1.75rem;
+    font-family: var(--main-font);
+    color: var(--second-color);
+    font-weight: 400;
+    letter-spacing: 0.295rem;
+}
+
+.landing .container h1 span {
+    font-family: var(--second-font);
+    font-size: 9.375rem;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 1.5rem 0;
+    letter-spacing: 0;
+}
+
+.landing .container p {
+    font-size: 1.125rem;
+    color: var(--second-color);
+    font-family: var(--main-font);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.4;
+}
+
+.landing .container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17.125rem;
+    height: 17.125rem;
+    background-color: #fff;
+    border-radius: 50%;
+    font-family: var(--second-font);
+    font-size: 2rem;
+    position: relative;
+    color: var(--main-color);
+    z-index: 5;
+    margin-bottom: 4.0625rem;
+}
+
+.landing .container a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0;
+    width: 0;
+    z-index: 3;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s linear;
+}
+
+.landing .container a:hover::before {
+    height: 28.125rem;
+    width: 28.125rem;
+}
+
+/* Tablet Device */
+
+@media (max-width: 48rem) {
+    .landing {
+        background-image: url('../images/home/background-home-tablet.jpg');
+    }
+
+    .landing .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .landing .container h1 {
+        text-align: center;
+    }
+
+    .landing .container p {
+        margin-bottom: 9.75rem;
+    }
+}
+
+/* Phone Device */
+
+@media (max-width: 36rem) {
+    .landing {
+        background-image: url('../images/home/background-home-mobile.jpg');
+    }
+
+    .landing .container .content {
+        width: 20.4375rem;
+    }
+
+    .landing .container h1 span {
+        font-size: 5rem;
+    }
+
+    .landing .container p {
+        font-size: 0.9375rem;
+    }
+}
+
+/* End Landing*/

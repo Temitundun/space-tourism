@@ -1,0 +1,265 @@
+/* Start Main Rules */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+
+:root {
+  --main-color: #0b0d17;
+  --second-color: #d2d8f9;
+  --hover-color: #85868b;
+  --main-padding-top: 100px;
+  --main-padding-bottom: 100px;
+  --main-font: "Barlow Condensed", sans-serif;
+  --second-font: "Bellefair", serifs;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    width: 100vw;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-weight: 400;
+}
+
+.main-title {
+    color: #fff;
+    font-size: 1.75rem;
+    font-family: var(--main-font);
+    font-weight: 400;
+    letter-spacing: 0.295rem;
+    margin-bottom: 4rem;
+}
+
+.main-title b {
+    margin-right: 1.75rem;
+    color: #979797;
+}
+
+@media (max-width: 36rem) {
+    .main-title {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 0.9375rem;
+}
+
+/* Small devices */
+
+@media (min-width: 36rem) {
+    .container {
+        width: 35rem;
+    }
+}
+
+/* Medium devices */
+
+@media (min-width: 48rem) {
+    .container {
+        width: 46.875rem;
+    }
+}
+
+/* Extra Large devices */
+
+@media (min-width: 75rem) {
+    .container {
+        width: 74.375rem;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* End Main Rules */
+
+/* Start Header */
+
+header {
+    height: 6rem;
+    margin: 2.5rem 0 0;
+    position: relative;
+    z-index: 9999;
+}
+
+header .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 9;
+}
+
+header .logo {
+    width: 3rem;
+    height: 3rem;
+}
+
+header .line {
+    width: 29.5625rem;
+    height: 0.0625rem;
+    background-color: #fff;
+}
+
+header .open-menu,
+header .close-menu {
+    display: none;
+}
+
+header nav ul {
+    display: flex;
+    gap: 3rem;
+    height: 6rem;
+}
+
+header nav ul li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+}
+
+header ul li::before {
+    content: "";
+    width: 0%;
+    height: 0.1875rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 0.3s linear;
+}
+
+header ul li:hover:before {
+    background-color: var(--hover-color);
+    width: 100%;
+}
+
+header ul li.active:before {
+    width: 100%;
+    background-color: #fff;
+}
+
+header ul li a {
+    font-family: var(--main-font);
+    font-size: 1rem;
+    color: #fff;
+}
+
+header ul li a b {
+    margin-right: 0.6875rem;
+}
+
+header .blure__back {
+    width: 51.875rem;
+    height: 6rem;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(81.5485px);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media (max-width: 69.375rem) {
+    header .line {
+        display: none;
+    }
+}
+
+@media (max-width: 48rem) {
+    header {
+        margin: 0;
+    }
+
+    header ul li a b {
+        display: none;
+    }
+
+    header .blure__back {
+        width: 28.125rem;
+    }
+}
+
+@media (max-width: 36rem) {
+    header nav {
+        height: 100vh;
+        width: 80%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(81.5485px);
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        transition: all 0.3s linear;
+        pointer-events: none;
+    }
+
+    header nav .close-menu {
+        display: block;
+        width: 1.2437rem;
+        margin-top: 2.125rem;
+        margin-bottom: 4.0625rem;
+        margin-right: 1.6563rem;
+        align-self: flex-end;
+        cursor: pointer;
+    }
+
+    header .open-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    header nav.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    header nav ul li {
+        height: 1.1875rem;
+    }
+
+    header ul li::before {
+        height: 100%;
+        width: 0.1875rem;
+    }
+
+    header ul li.active::before {
+        height: 100%;
+        width: 0.3125rem;
+    }
+    
+    header ul li a b {
+        display: inline;
+        margin-left: 2rem;
+    }
+
+    header .blure__back {
+        display: none;
+    }
+}
+
+/* End Header */

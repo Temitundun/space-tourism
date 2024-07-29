@@ -1,0 +1,145 @@
+/* Start Technology */
+
+.technology {
+    background-image: url('../images/technology/background-technology-desktop.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    padding-top: calc(8.5rem + 4.75rem);
+}
+
+.technology .content {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.technology .enumirate {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;   
+}
+
+.technology .enumirate .num {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 0.0625rem solid var(--hover-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2rem;
+    font-family: var(--second-font);
+    cursor: pointer;
+}
+
+.technology .enumirate .num:hover {
+    border-color: #fff;
+}
+
+.technology .enumirate .num.active {
+    color: var(--main-color);
+    background-color: #fff;
+}
+
+.technology .content h2 {
+    font-size: 1rem;
+    letter-spacing: 0.1688rem;
+    color: var(--second-color);
+    margin-bottom: 0.6875rem;
+    font-family: var(--main-font);
+    text-transform: uppercase;
+}
+
+.technology .content .name {
+    font-size: 3.5rem;
+    font-family: var(--second-font);
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 1.0625rem;
+}
+
+.technology .content .description {
+    width: 27.75rem;
+    font-size: 1.125rem;
+    color: var(--second-color);
+    line-height: 1.4;
+    word-spacing: 0.0625rem;
+    margin-bottom: 6.0625rem;
+}
+
+.technology .content img {
+    position: absolute;
+    right: 0;
+}
+
+@media (max-width: 68.75rem) {
+    .technology .main-title {
+        margin-left: 0.9375rem;
+    }
+
+    .technology .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .technology .content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .technology .content img {
+        position: relative;
+        width: 100vw;
+        order: 4;
+    }
+
+    .technology .enumirate {
+        order: 3;
+        flex-direction: row;
+    }
+
+    .technology .content h2,
+    .technology .content .name,
+    .technology .content .description {
+        text-align: center;
+    }    
+}
+
+@media (max-width: 48rem) {
+    .technology {
+        background-image: url('../images/destination/background-destination-tablet.jpg');
+    }
+}
+
+@media (max-width: 36rem) {
+    .technology {
+        background-image: url('../images/destination/background-destination-mobile.jpg');
+    }
+
+    .technology .enumirate {
+        gap: 1rem;
+    }
+
+    .technology .enumirate .num {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+
+    .technology .content h2 {
+        font-size: 0.875rem;
+    }
+
+    .technology .content .name {
+        font-size: 1.5rem;
+    }
+
+    .technology .content .description {
+        font-size: 0.9375rem;
+        width: 20.4375rem;
+    }
+}
+
+/* End Technology */
