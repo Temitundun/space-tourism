@@ -1,21 +1,22 @@
-// Find all the list items in the navigation bar and call them "links"
+// This grabs all the list items in the navigation bar and calls them "links". 
+// These are the buttons we can click to see different destinations.
 const links = document.querySelectorAll(".navigation li");
 
-// Find where we will put the picture, name, description, distance, and travel time
+// These lines find the places on the webpage where we will show the picture, name, description, distance, and travel time for each destination.
 let image = document.querySelector(".image");
 let name = document.querySelector(".name");
 let description = document.querySelector(".description");
 let distance = document.querySelector(".distance");
 let travel = document.querySelector(".travel");
 
-// Make an empty box called "elements" to store information about the destinations
+// This is an empty array where we will store information about the destinations.
 let elements = [];
 
-// Go get the information about the destinations from the internet
-fetch("https://achrafedd.github.io/Space-Tourism/data.json")
-    .then((res) => res.json()) // When the information comes back, turn it into something we can use
+// This line goes to the internet to get a file called "data.json" which has information about the destinations.
+fetch("./data.json")
+    .then((res) => res.json()) // This turns the data we get back into something we can use.
     .then((data) => {
-        // For each destination in the data, put their information into the "elements" box
+        // This goes through each destination in the data and puts their information into the "elements" box.
         for (let i = 0; i < data.destinations.length; i++) {
             elements.push(data.destinations[i]);
         }

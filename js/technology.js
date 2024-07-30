@@ -7,12 +7,14 @@ let description = document.querySelector(".description");
 let image = document.querySelector(".image");
 
 // Make an empty box called "allData" to store information about the technology
+// We will use this array to store information about different technologies.
+// As we fetch or receive technology data from the internet or another source, we will add that data into this array so we can access it later.
 let allData = [];
-let num = 0; // A number to keep track of which button was clicked
-let img = ""; // A string to keep track of which image to show
+let num = 0; //The num variable is used to keep track of which button was clicked. When a button is clicked, this variable will be updated to reflect the number or index of the clicked button
+let img = ""; // The img variable is used to store the URL or file path of the image that should be displayed. When a button is clicked, this variable will be updated to hold the appropriate image URL for the selected technology.
 
 // Go get the information about the technology from the internet
-fetch("https://achrafedd.github.io/Space-Tourism/data.json")
+fetch("./data.json")
     .then((res) => res.json()) // When the information comes back, turn it into something we can use
     .then((data) => {
         // For each technology item in the data, put their information into the "allData" box
